@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<article>
+  <header>
+    <h1>🏷️ {{ .Data.Term }}</h1>
+  </header>
+
+  {{ partial "article-list.html" .Paginator.Pages }}
+
+  <footer>
+    <nav>{{ template "_internal/pagination.html" . }}</nav>
+  </footer>
+
+</article>
+
+{{ end }}

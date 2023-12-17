@@ -1,0 +1,15 @@
+ul.tags {
+  column-gap: 1.2rem;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: var(--small-text);
+  list-style: none;
+  padding: 0;
+  row-gap: 0.3rem;
+  width: 100%;
+  justify-content: center;
+}
+
+ul.tags li {
+  color: var(--dark-grey);
+}

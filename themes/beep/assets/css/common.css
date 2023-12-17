@@ -1,0 +1,5 @@
+h2 {
+  border-bottom: 1px solid var(--light-grey);
+  margin-top: var(--heading-spacing);
+  padding-bottom: 0.4rem;
+}

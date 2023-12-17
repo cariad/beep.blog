@@ -1,0 +1,53 @@
+{{ $thumbnailHeight := 200 }}
+{{ $thumbnailWidth := 900 }}
+
+<nav class="article-list">
+  {{ range . }}
+    {{ $images := .Site.GetPage "/images" }}
+    {{ $imageId := default .Params.image .Params.advertising.image }}
+
+
+    <article>
+      <header>
+
+
+        {{ with $imageId }}
+
+          {{ $resource := $images.Resources.GetMatch $imageId }}
+          {{ $anchor := default "Smart" $resource.Params.anchor }}
+          {{ $params := print $thumbnailWidth "x" $thumbnailHeight " " $anchor " Lanczos webp " $resource.Params.webp_preset }}
+          {{ $img := $resource.Fill $params }}
+
+          <img
+            alt="{{ $resource.Params.alt }}"
+            height="{{ $thumbnailHeight }}"
+            src="{{ $img.RelPermalink }}"
+            width="{{ $thumbnailWidth }}"
+          />
+
+        {{ end }}
+
+        <h1>
+          <a
+            href="{{ .RelPermalink }}">
+            {{- .Title -}}
+          </a>
+        </h1>
+
+        {{ with .Params.content_warnings }}
+          <p class="content-warning">
+            This article has content warnings for {{ delimit . ", " " and " }}.
+          </p>
+        {{ end }}
+
+        <p>
+          <span class="date">{{ .Date.Format "Monday, 2 January 2006" }}</span>
+          &bullet;
+          {{ .Summary | plainify | safeHTML }}
+        </p>
+
+      </header>
+
+    </article>
+  {{ end }}
+</nav>

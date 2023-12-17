@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{- partial "head.html" . -}}
+
+  <body>
+    <header id="header">
+      <p id="site-title">
+        <a href="/">
+          {{- .Site.Params.emoji | default "❤️" }} {{ .Site.Title -}}
+        </a>
+      </p>
+    </header>
+
+    {{- block "main" . }}{{- end }}
+
+    <footer id="page-footer">
+      <ul class="tags">
+        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+          {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+            <li>#<a href="{{ .RelPermalink }}">{{ .Name }}</a></li>
+          {{ end }}
+        {{ end }}
+      </ul>
+
+      {{ with .Site.Params }}
+        <p id="copyright">
+          &copy;
+          {{ .copyright.from -}}
+          -
+          {{- .copyright.to }}
+          {{ .author.name }}
+          &bullet;
+          <a
+          href="{{ .author.social.url }}"
+            rel="me"
+          >
+          {{ .author.social.label }}
+          </a>
+        </p>
+      {{ end }}
+    </footer>
+  </body>
+</html>

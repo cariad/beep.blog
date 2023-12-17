@@ -1,0 +1,21 @@
+baseURL: https://beep.blog
+languageCode: en-GB
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+paginate: 12
+params:
+  copyright:
+    from: 2021
+    to: 2023
+  author:
+    name: Cariad Eccleston
+    social:
+      url: https://hachyderm.io/@cariad
+      label: "@cariad@hachyderm.io"
+permalinks:
+  /: /:year/:month/:slug/
+pygmentsUseClasses: true
+theme: beep
+title: beep.blog

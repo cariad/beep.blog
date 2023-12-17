@@ -1,0 +1,215 @@
+:root {
+  --dark-grey: #686868;
+  --light-grey: #ccc;
+
+  --heading-spacing: 4rem;
+  --paragraph-spacing: 2.4rem;
+
+  --tall-spacing: 4rem;
+
+  --readable-inset-width: 32rem;
+
+  --small-text: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #f9f9f9;
+  max-width: 900px;
+
+  margin-top: 6rem;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: rgb(31, 31, 31);
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: var(--small-text);
+  margin-top: 10px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+h1,
+h2,
+p {
+  margin-inline: auto;
+  max-width: 760px;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h2,
+ol,
+p,
+ul {
+  margin-bottom: 40px;
+}
+
+blockquote,
+article ol {
+  margin-inline: auto;
+  max-width: 600px;
+}
+
+blockquote {
+  font-style: italic;
+  color: rgb(61, 2, 88);
+}
+
+.article-list img {
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+.article-list h1 {
+  font-size: 1.8rem;
+}
+
+p {
+  width: 100%;
+}
+
+#single h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+#single header img {
+  margin-top: 40px;
+}
+
+h1 {
+  font-weight: 800;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+/* PAGE */
+
+#header {
+  margin-bottom: 4rem;
+}
+
+/* ARTICLE LIST */
+
+.date {
+  font-weight: 800;
+}
+
+.article-list {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 50px;
+}
+
+.article-list > * {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* ARTICLE */
+
+article p {
+  text-align: justify;
+}
+
+.content-warning {
+  background-color: rgb(255, 255, 191);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: var(--small-text);
+}
+
+.preamble {
+  font-size: var(--small-text);
+  margin-top: 0;
+}
+
+/* ARTICLE FOOTER */
+
+.footnotes ol {
+  max-width: 900px;
+}
+
+.footnotes {
+  font-size: var(--small-text);
+}
+
+.footnotes p {
+  margin: 0;
+}
+
+/* PAGE FOOTER */
+
+#page-footer {
+  font-size: var(--small-text);
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#copyright {
+  text-align: center;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/merriweather-sans/merriweather-sans-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/merriweather-sans/merriweather-sans-v26-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/merriweather-sans/merriweather-sans-v26-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: url('/fonts/merriweather-sans/merriweather-sans-v26-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/merriweather-sans/merriweather-sans-v26-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 800;
+  src: url('/fonts/merriweather-sans/merriweather-sans-v26-latin-800italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}

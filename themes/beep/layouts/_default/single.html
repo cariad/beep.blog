@@ -1,0 +1,84 @@
+{{ define "main" }}
+
+{{ $imageWidth := 900 }}
+
+<article id="single">
+  <header>
+    <h1>{{ .Title }}</h1>
+    <p class="preamble">
+      🔗
+      <a href="{{ .RelPermalink }}"
+         title="Permalink to &quot;{{ .Title }}&quot;">
+        {{ .Date.Format "Monday, 2 January 2006" -}}
+      </a>
+      &bullet;
+      {{ .Site.Params.author.name }}
+      &bullet;
+      <a
+        href="{{ .Site.Params.author.social.url }}"
+        rel="me">
+        {{- .Site.Params.author.social.label -}}
+      </a>
+    </p>
+
+    {{ with .Params.content_warnings }}
+      <p class="content-warning">
+        This article has content warnings for {{ delimit . ", " " and " }}.
+      </p>
+    {{ end }}
+
+    <p class="preamble">{{ .Summary }}</p>
+
+    {{ with .Params.image }}
+
+      {{ $images := $.Site.GetPage "/images" }}
+      {{ $resource := $images.Resources.GetMatch . }}
+      {{ $anchor := default "Smart" $resource.Params.anchor }}
+      {{ $params := print $imageWidth "x " $anchor " Lanczos webp " $resource.Params.webp_preset }}
+      {{ $img := $resource.Resize $params }}
+
+      <figure>
+
+        <img
+          alt="{{ $resource.Params.alt }}"
+          height="{{ math.Floor (mul $imageWidth (div (float $resource.Height) $resource.Width )) }}"
+          src="{{ $img.RelPermalink }}"
+          width="{{ $imageWidth }}"
+        />
+
+        {{ with $resource.Params.attribution }}
+          <figcaption>
+            {{ . | safeHTML }}
+          </figcaption>
+        {{ end }}
+
+      </figure>
+
+    {{ end }}
+
+  </header>
+
+  {{ .Content }}
+  {{ $title := .Title }}
+
+  <footer>
+
+    {{ with .Params.tags }}
+      <ul class="tags">
+        <li>"{{ $title }}"</li>
+        {{ range . }}
+          <li>#<a href="/tags/{{ . | urlize }}">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+
+    {{ with .Site.RegularPages.Related . }}
+      <h2>Related</h2>
+      {{ partial "article-list.html" . }}
+    {{ end }}
+
+  </footer>
+
+</article>
+
+{{ end }}

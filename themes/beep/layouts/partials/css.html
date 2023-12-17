@@ -1,0 +1,23 @@
+{{ $cssFilenames := slice
+  "layout"
+  "page-header"
+  "common"
+  "tags"
+  "query-wide"
+  "global"
+}}
+
+{{ $resources := slice }}
+
+{{ range $cssFilenames }}
+  {{ $path := printf "css/%s.css" . }}
+  {{ $resource := resources.Get $path }}
+  {{ $resources = $resources | append $resource }}
+{{ end }}
+
+{{ $bundle := $resources | resources.Concat "bundle.css" }}
+{{ $css := $bundle | minify | fingerprint }}
+
+<link rel="stylesheet"
+      href="{{ $css.RelPermalink }}"
+      integrity="{{ $css.Data.Integrity }}" />
