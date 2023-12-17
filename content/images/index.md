@@ -1,6 +1,14 @@
 ---
 headless: true
 resources:
+  - name: ultimate-aeropress-technique
+    params:
+      alt: Photo of an AeroPress squeezing coffee with the caption "The Ultimate AeroPress technique"
+      anchor: Center
+      attribution: © James Hoffman, https://www.youtube.com/watch?v=j6VlT_jUVPc
+      webp_preset: picture
+    src: ultimate-aeropress-technique.jpg
+
   - name: webup-1-code
     params:
       alt: Screenshot of the cariad/webup repository.

@@ -15,7 +15,7 @@ params:
       url: https://hachyderm.io/@cariad
       label: "@cariad@hachyderm.io"
 permalinks:
-  /: /:year/:month/:slug/
+  /: /:filename
 pygmentsUseClasses: true
 theme: beep
 title: beep.blog
