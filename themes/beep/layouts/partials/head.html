@@ -1,3 +1,9 @@
+{{ $ogImageWidth := 1200 }}
+{{ $ogImageHeight := 630 }}
+
+{{ $images := .Site.GetPage "/images" }}
+{{ $imageId := default .Params.advertising.image .Params.image }}
+
 <head>
   <link href="/index.xml"
         rel="alternate"
@@ -23,6 +29,35 @@
 
   <meta content="{{- partial "page-description.html" . -}}"
         property="og:description"/>
+
+  {{ with $imageId }}
+
+    {{ $resource := $images.Resources.GetMatch $imageId }}
+    {{ $anchor := default "Smart" $resource.Params.anchor }}
+    {{ $params := print $ogImageWidth "x" $ogImageHeight " " $anchor " Lanczos webp " $resource.Params.webp_preset }}
+    {{ $img := $resource.Fill $params }}
+
+    <meta
+      content="{{ $img.Permalink }}"
+      property="og:image"
+    />
+
+    <meta
+      content="{{ $resource.Params.alt }}"
+      property="og:image:alt"
+    />
+
+    <meta
+      content="{{ $ogImageWidth }}"
+      property="og:image:width"
+    />
+
+    <meta
+      content="{{ $ogImageHeight }}"
+      property="og:image:height"
+    />
+
+  {{ end }}
 
   <meta content="{{- partial "page-title.html" . -}}"
         property="og:title" />
