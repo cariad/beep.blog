@@ -7,7 +7,7 @@ markup:
 paginate: 12
 params:
   copyright:
-    from: 2021
+    from: 2014
     to: 2023
   author:
     name: Cariad Eccleston

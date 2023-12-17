@@ -1,0 +1,26 @@
+{{ $name := .Get "name" }}
+{{ $images := .Site.GetPage "/images" }}
+{{ $resource := $images.Resources.GetMatch $name }}
+
+{{ $imageWidth := 900 }}
+
+{{ $anchor := default "Smart" $resource.Params.anchor }}
+{{ $params := print $imageWidth "x " $anchor " Lanczos webp " $resource.Params.webp_preset }}
+{{ $img := $resource.Resize $params }}
+
+<figure>
+
+  <img
+    alt="{{ $resource.Params.alt }}"
+    class="image-shortcode"
+    height="{{ $img.Height }}"
+    src="{{ $img.RelPermalink }}"
+    width="{{ $imageWidth }}"
+  />
+
+  <figcaption>
+    {{ $resource.Params.caption | safeHTML }}
+    {{ $resource.Params.attribution | safeHTML }}
+  </figcaption>
+
+</figure>

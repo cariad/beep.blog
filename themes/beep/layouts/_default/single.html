@@ -41,7 +41,7 @@
 
         <img
           alt="{{ $resource.Params.alt }}"
-          height="{{ math.Floor (mul $imageWidth (div (float $resource.Height) $resource.Width )) }}"
+          height="{{ $img.Height }}"
           src="{{ $img.RelPermalink }}"
           width="{{ $imageWidth }}"
         />

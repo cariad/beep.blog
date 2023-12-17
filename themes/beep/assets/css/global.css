@@ -135,6 +135,10 @@ article p {
   font-size: var(--small-text);
 }
 
+.image-shortcode {
+  border-radius: 10px;
+}
+
 .preamble {
   font-size: var(--small-text);
   margin-top: 0;
