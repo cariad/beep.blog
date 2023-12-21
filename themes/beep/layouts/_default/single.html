@@ -46,11 +46,10 @@
           width="{{ $imageWidth }}"
         />
 
-        {{ with $resource.Params.attribution }}
-          <figcaption>
-            {{ . | safeHTML }}
-          </figcaption>
-        {{ end }}
+        <figcaption>
+          {{ $resource.Params.caption | safeHTML }}<br />
+          {{ $resource.Params.attribution | safeHTML }}
+        </figcaption>
 
       </figure>
 

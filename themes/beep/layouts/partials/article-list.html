@@ -1,11 +1,12 @@
-{{ $thumbnailHeight := 200 }}
+{{ $thumbnailHeight := 300 }}
 {{ $thumbnailWidth := 900 }}
 
 <nav class="article-list">
   {{ range . }}
     {{ $images := .Site.GetPage "/images" }}
     {{ $imageId := default .Params.image .Params.advertising.image }}
-
+    {{ $title := .Title }}
+    {{ $url := .RelPermalink }}
 
     <article>
       <header>
@@ -18,18 +19,25 @@
           {{ $params := print $thumbnailWidth "x" $thumbnailHeight " " $anchor " Lanczos webp " $resource.Params.webp_preset }}
           {{ $img := $resource.Fill $params }}
 
-          <img
-            alt="{{ $resource.Params.alt }}"
-            height="{{ $thumbnailHeight }}"
-            src="{{ $img.RelPermalink }}"
-            width="{{ $thumbnailWidth }}"
-          />
+          <a
+            href="{{ $url }}"
+            title="{{ $title }}"
+          >
+            <img
+              alt="{{ $resource.Params.alt }}"
+              height="{{ $thumbnailHeight }}"
+              src="{{ $img.RelPermalink }}"
+              width="{{ $thumbnailWidth }}"
+            />
+          </a>
 
         {{ end }}
 
         <h1>
           <a
-            href="{{ .RelPermalink }}">
+            href="{{ $url }}"
+            title="{{ $title }}"
+          >
             {{- .Title -}}
           </a>
         </h1>

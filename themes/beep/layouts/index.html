@@ -1,5 +1,13 @@
 {{ define "main" }}
 
+  <ul class="tags">
+    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+      {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+        <li>#<a href="{{ .RelPermalink }}">{{ .Name }}</a></li>
+      {{ end }}
+    {{ end }}
+  </ul>
+
   {{ partial "article-list.html" .Paginator.Pages }}
 
   <footer class="pagination">

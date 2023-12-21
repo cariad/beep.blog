@@ -89,7 +89,7 @@ blockquote {
 }
 
 .article-list img {
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
   border-radius: 10px;
 }
 
@@ -164,9 +164,10 @@ article p {
 
 .content-warning {
   background-color: rgb(255, 255, 191);
-  padding: 10px;
   border-radius: 10px;
+  box-sizing: border-box;
   font-size: var(--small-text);
+  padding: 10px;
 }
 
 .image-shortcode {
