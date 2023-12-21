@@ -89,8 +89,12 @@ blockquote {
 }
 
 .article-list img {
-  margin-bottom: 20px;
   border-radius: 10px;
+  display: block;
+  margin-top: 0 !important;
+  margin-bottom: 20px;
+  margin-inline: auto;
+  max-width: 760px;
 }
 
 .article-list h1 {
@@ -141,10 +145,6 @@ h1 {
 .article-list > * {
   display: flex;
   flex-flow: column nowrap;
-}
-
-.article-list img {
-  margin-top: 0 !important;
 }
 
 /* ARTICLE */
