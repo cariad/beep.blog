@@ -3,9 +3,10 @@
   --light-grey: #ccc;
 
   --heading-spacing: 4rem;
-  --paragraph-spacing: 2.4rem;
-
-  --tall-spacing: 4rem;
+  --medium-spacing: 20px;
+  --paragraph-spacing: 40px;
+  --small-spacing: 10px;
+  --tall-spacing: 10px;
 
   --readable-inset-width: 32rem;
 
@@ -20,10 +21,13 @@ body {
   background-color: #f9f9f9;
   max-width: 900px;
 
-  margin-top: 6rem;
+  margin-top: var(--tall-spacing);
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
+
+  padding-left: 10px;
+  padding-right: 10px;
 
   font-family: "Merriweather Sans", sans-serif;
   font-size: 1.1em;
@@ -42,6 +46,11 @@ figcaption {
   text-align: center;
 }
 
+img {
+  height: auto;
+  width: 100%;
+}
+
 h1,
 h2,
 p {
@@ -51,19 +60,27 @@ p {
 
 h2 {
   font-size: 2.2rem;
+  line-height: 1.2;
 }
 
 h2,
 ol,
 p,
-ul {
-  margin-bottom: 40px;
+ul,
+.highlight {
+  margin-bottom: var(--paragraph-spacing);
+}
+
+li {
+  margin-bottom: calc(var(--paragraph-spacing) / 4);
 }
 
 blockquote,
-article ol {
+article ol,
+article ul {
   margin-inline: auto;
-  max-width: 600px;
+  max-width: 700px;
+  text-align: justify;
 }
 
 blockquote {
@@ -82,15 +99,7 @@ blockquote {
 
 p {
   width: 100%;
-}
-
-#single h1 {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-}
-
-#single header img {
-  margin-top: 40px;
+  margin-top: 0;
 }
 
 h1 {
@@ -102,7 +111,18 @@ h1 {
 /* PAGE */
 
 #header {
-  margin-bottom: 4rem;
+  margin-bottom: var(--medium-spacing);
+}
+
+#site-title {
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  margin: 0;
+  text-align: center;
+}
+
+#site-title > a {
+  color: inherit;
 }
 
 /* ARTICLE LIST */
@@ -128,6 +148,20 @@ article p {
   text-align: justify;
 }
 
+#single h1 {
+  font-size: 2rem;
+  margin-bottom: var(--medium-spacing);
+  text-align: center;
+}
+
+#single header {
+  margin-bottom: var(--medium-spacing);
+}
+
+#single header img {
+  margin-top: var(--medium-spacing);
+}
+
 .content-warning {
   background-color: rgb(255, 255, 191);
   padding: 10px;
@@ -142,6 +176,8 @@ article p {
 .preamble {
   font-size: var(--small-text);
   margin-top: 0;
+  margin-bottom: var(--small-spacing);
+  text-align: center;
 }
 
 /* ARTICLE FOOTER */
@@ -216,4 +252,24 @@ article p {
   font-style: italic;
   font-weight: 800;
   src: url('/fonts/merriweather-sans/merriweather-sans-v26-latin-800italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@media (min-width: 700px) {
+  :root {
+    --tall-spacing: 100px;
+    --medium-spacing: 60px;
+  }
+
+  #site-title {
+    text-align: left;
+  }
+
+  #single h1 {
+    font-size: 4rem;
+    text-align: left;
+  }
+
+  .preamble {
+    text-align: left;
+  }
 }

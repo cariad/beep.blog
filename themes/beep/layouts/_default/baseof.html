@@ -40,4 +40,27 @@
       {{ end }}
     </footer>
   </body>
+
+  {{ $postCssFilenames := slice
+    "post"
+    "syntax"
+  }}
+
+  {{ $postCssResources := slice }}
+
+  {{ range $postCssFilenames }}
+    {{ $path := printf "css/%s.css" . }}
+    {{ $resource := resources.Get $path }}
+    {{ $postCssResources = $postCssResources | append $resource }}
+  {{ end }}
+
+  {{ $postCssBundle := $postCssResources | resources.Concat "post-bundle.css" }}
+  {{ $postCss := $postCssBundle | minify | fingerprint }}
+
+  <link
+    href="{{ $postCss.RelPermalink }}"
+    integrity="{{ $postCss.Data.Integrity }}"
+    rel="stylesheet"
+  />
+
 </html>

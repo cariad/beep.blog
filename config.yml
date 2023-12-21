@@ -4,6 +4,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    noClasses: false
 paginate: 12
 params:
   copyright:
@@ -16,6 +18,5 @@ params:
       label: "@cariad@hachyderm.io"
 permalinks:
   /: /:filename
-pygmentsUseClasses: true
 theme: beep
 title: beep.blog

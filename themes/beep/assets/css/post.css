@@ -1,0 +1,55 @@
+code {
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+}
+
+p code {
+  color: rgb(7, 75, 16);
+  font-weight: 500;
+}
+
+.highlight .chroma {
+  border-radius: 10px;
+  padding: 20px;
+  overflow-x: scroll;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/fira-code/FiraCode-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/fira-code/FiraCode-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/fira-code/FiraCode-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/fira-code/FiraCode-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/fira-code/FiraCode-Bold.woff2') format('woff2');
+}

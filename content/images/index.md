@@ -41,6 +41,18 @@ resources:
       webp_preset: photo
     src: john-lewis-exeter.jpg
 
+  - name: rolumns-1-3-code
+    params:
+      alt: Rolumns v1.3 code sample
+      webp_preset: text
+    src: rolumns-1-3-code.png
+
+  - name: rolumns-1-3-code-transparent
+    params:
+      alt: Rolumns v1.3 code sample
+      webp_preset: text
+    src: rolumns-1-3-code-transparent.png
+
   - name: ultimate-aeropress-technique
     params:
       alt: Photo of an AeroPress squeezing coffee with the caption "The Ultimate AeroPress technique"
@@ -60,13 +72,13 @@ resources:
 
   - name: webup-1-code
     params:
-      alt: Screenshot of the cariad/webup repository.
+      alt: WebUp code sample
       webp_preset: text
     src: webup-1-code.png
 
   - name: webup-1-code-transparent
     params:
-      alt: Screenshot of the cariad/webup repository.
+      alt: WebUp code sample
       webp_preset: text
     src: webup-1-code-transparent.png
 
