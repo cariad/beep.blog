@@ -8,7 +8,10 @@
     {{ end }}
   </ul>
 
-  {{ partial "article-list.html" .Paginator.Pages }}
+  {{ partial "article-list.html" (dict
+      "pages" .Paginator.Pages
+      "thumbnailHeight" 500
+  ) }}
 
   <footer class="pagination">
     <nav>{{ template "_internal/pagination.html" . }}</nav>

@@ -1,8 +1,8 @@
-{{ $thumbnailHeight := 300 }}
+{{ $thumbnailHeight := .thumbnailHeight }}
 {{ $thumbnailWidth := 900 }}
 
 <nav class="article-list">
-  {{ range . }}
+  {{ range .pages }}
     {{ $images := .Site.GetPage "/images" }}
     {{ $imageId := default .Params.image .Params.advertising.image }}
     {{ $title := .Title }}
@@ -10,7 +10,6 @@
 
     <article>
       <header>
-
 
         {{ with $imageId }}
 

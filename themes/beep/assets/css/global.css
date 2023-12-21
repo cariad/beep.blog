@@ -94,7 +94,8 @@ blockquote {
 }
 
 .article-list h1 {
-  font-size: 1.8rem;
+  font-size: 1.8rem !important;
+  margin-bottom: 20px !important;
 }
 
 p {
@@ -104,7 +105,7 @@ p {
 
 h1 {
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-top: 0;
 }
 
@@ -140,6 +141,10 @@ h1 {
 .article-list > * {
   display: flex;
   flex-flow: column nowrap;
+}
+
+.article-list img {
+  margin-top: 0 !important;
 }
 
 /* ARTICLE */

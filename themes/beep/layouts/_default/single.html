@@ -73,7 +73,10 @@
 
     {{ with .Site.RegularPages.Related . }}
       <h2>Related</h2>
-      {{ partial "article-list.html" . }}
+      {{ partial "article-list.html" (dict
+          "pages" .
+          "thumbnailHeight" 100
+      ) }}
     {{ end }}
 
   </footer>

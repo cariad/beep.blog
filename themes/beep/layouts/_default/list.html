@@ -5,7 +5,10 @@
     <h1>🏷️ {{ .Data.Term }}</h1>
   </header>
 
-  {{ partial "article-list.html" .Paginator.Pages }}
+  {{ partial "article-list.html" (dict
+      "pages" .Paginator.Pages
+      "thumbnailHeight" 500
+  ) }}
 
   <footer>
     <nav>{{ template "_internal/pagination.html" . }}</nav>
