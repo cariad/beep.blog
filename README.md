@@ -1,6 +1,6 @@
 # beep.blog
 
-Articles for [beep.blog](https://beep.blog).
+Articles for [beep.blog](https://www.beep.blog).
 
 ## Local authoring
 
