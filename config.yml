@@ -14,8 +14,8 @@ params:
   author:
     name: Cariad Eccleston
     social:
-      url: https://hachyderm.io/@cariad
-      label: "@cariad@hachyderm.io"
+      url: https://mastodon.art/@cariad
+      label: "@cariad@mastodon.art"
 permalinks:
   /: /:filename
 theme: beep
