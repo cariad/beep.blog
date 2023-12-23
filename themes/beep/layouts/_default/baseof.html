@@ -9,7 +9,7 @@
 
   <head>
 
-    <link href="/index.xml"
+    <link href="{{ .Site.BaseURL }}index.xml"
           rel="alternate"
           title="RSS feed for {{ .Site.Title }}"
           type="application/rss+xml"  />
@@ -26,7 +26,10 @@
           name="description" />
 
     {{ if not .IsPage }}
-      <meta content=”noindex” name=”robots”/>
+      <meta
+        content="noindex"
+        name="robots"
+      />
     {{ end }}
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -58,6 +61,28 @@
 
       <meta
         content="{{ $ogImageHeight }}"
+        property="og:image:height"
+      />
+
+    {{ else }}
+
+      <meta
+        content="{{ .Site.BaseURL }}opengraph.png"
+        property="og:image"
+      />
+
+      <meta
+        content="{{ .Site.Title }}"
+        property="og:image:alt"
+      />
+
+      <meta
+        content="2558"
+        property="og:image:width"
+      />
+
+      <meta
+        content="1243"
         property="og:image:height"
       />
 

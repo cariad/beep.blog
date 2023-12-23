@@ -8,14 +8,15 @@ markup:
     noClasses: false
 paginate: 12
 params:
-  copyright:
-    from: 2014
-    to: 2023
   author:
     name: Cariad Eccleston
     social:
       url: https://mastodon.art/@cariad
       label: "@cariad@mastodon.art"
+  copyright:
+    from: 2014
+    to: 2023
+  description: A blog by Cariad Eccleston
 permalinks:
   /: /:filename
 theme: beep
