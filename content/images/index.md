@@ -25,6 +25,13 @@ resources:
       webp_preset: photo
     src: exeter-cathedral-from-princesshay.jpg
 
+  - name: iphone-2021-11-02
+    params:
+      alt: iPhone home screen with Twitter app
+      caption: My iPhone home screen circa November 2021.
+      webp_preset: photo
+    src: iphone-2021-11-02.jpg
+
   - name: jamie-exeter
     params:
       alt: Photograph of Jamie's Italian restaurant in Exeter Princesshay
@@ -41,6 +48,13 @@ resources:
       webp_preset: photo
     src: john-lewis-exeter.jpg
 
+  - name: rhodia-purple
+    params:
+      alt: Soft cover notebook / 7.5 x 9.8 inches / 80 lined sheets / ribbon bookmark / expandable inner pocket / 90 gsm ivory brushed vellum paper / made in Étival-Clairefontaine, France
+      caption: Rhodia soft cover notebook.
+      webp_preset: photo
+    src: rhodia-purple.jpg
+
   - name: rolumns-1-3-code
     params:
       alt: Rolumns v1.3 code sample
@@ -52,6 +66,34 @@ resources:
       alt: Rolumns v1.3 code sample
       webp_preset: text
     src: rolumns-1-3-code-transparent.png
+
+  - name: season-of-mindfulness-2021
+    params:
+      alt: A purple soft cover Rhodia notebook, Midori 15 cm aluminium rule, Staedtler Night Blue 2 mm lead holder, 2 mm Staedtler Mars carbon leads and box of Pentel 1 mm EnerGel X pens.
+      caption: A purple soft cover Rhodia notebook, Midori 15 cm aluminium rule, Staedtler Night Blue 2 mm lead holder, 2 mm Staedtler Mars carbon leads and box of Pentel 1 mm EnerGel X pens.
+      webp_preset: photo
+    src: season-of-mindfulness-2021.jpg
+
+  - name: staedtler-lead-holder
+    params:
+      alt: Staedtler Night Blue 2.0mm lead holder.
+      caption: Staedtler Night Blue 2.0mm lead holder.
+      webp_preset: photo
+    src: staedtler-lead-holder.jpg
+
+  - name: staedtler-lead-holder-dirty
+    params:
+      alt: A dirty Staedtler Night Blue 2.0mm lead holder.
+      caption: Staedtler Night Blue 2.0mm lead holder.
+      webp_preset: photo
+    src: staedtler-lead-holder-dirty.jpg
+
+  - name: twitter-information-request
+    params:
+      alt: Our records indicate that you've made 8,827 abuse reports in the past 24 months. Of those, 242 reports have been processed.
+      caption: "&quot;Our records indicate that you've made 8,827 abuse reports in the past 24 months. Of those, 242 reports have been processed.&quot;"
+      webp_preset: text
+    src: twitter-information-request.png
 
   - name: ultimate-aeropress-technique
     params:
@@ -89,4 +131,11 @@ resources:
       attribution: The Chagos Archipelago. Image copyright © OpenStreetMap.
       webp_preset: drawing
     src: world-map-chagos.png
+
+  - name: writing-samples
+    params:
+      alt: "Samples of writing from lightest to darkest: unknown HB lead, Staedtler Mars Carbon 2 mm 2B lead and EnerGel X"
+      caption: "From lightest to darkest: Unknown HB lead, Staedtler Mars Carbon 2 mm 2B lead and EnerGel X."
+      webp_preset: photo
+    src: writing-samples.jpg
 ---
