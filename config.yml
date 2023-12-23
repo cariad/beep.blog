@@ -1,4 +1,4 @@
-baseURL: https://www.beep.blog
+baseURL: https://www.beep.blog/
 languageCode: en-GB
 markup:
   goldmark:
