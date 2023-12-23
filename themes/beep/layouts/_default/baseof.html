@@ -1,6 +1,88 @@
+{{ $ogImageWidth := 1200 }}
+{{ $ogImageHeight := 630 }}
+
+{{ $images := .Site.GetPage "/images" }}
+{{ $imageId := default .Params.advertising.image .Params.image }}
+
 <!DOCTYPE html>
 <html lang="en">
-  {{- partial "head.html" . -}}
+
+  <head>
+
+    <link href="/index.xml"
+          rel="alternate"
+          title="RSS feed for {{ .Site.Title }}"
+          type="application/rss+xml"  />
+
+    <link href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ .Site.Params.emoji | default "❤️" }}</text></svg>"
+          rel="icon" />
+
+    <link href="{{ .Permalink }}"
+          rel="canonical" />
+
+    <meta charset="utf-8" />
+
+    <meta content="{{- partial "page-description.html" . -}}"
+          name="description" />
+
+    {{ if not .IsPage }}
+      <meta content=”noindex” name=”robots”/>
+    {{ end }}
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <meta content="{{- partial "page-description.html" . -}}"
+          property="og:description"/>
+
+    {{ with $imageId }}
+
+      {{ $resource := $images.Resources.GetMatch $imageId }}
+      {{ $anchor := default "Smart" $resource.Params.anchor }}
+      {{ $params := print $ogImageWidth "x" $ogImageHeight " " $anchor " Lanczos webp " $resource.Params.webp_preset }}
+      {{ $img := $resource.Fill $params }}
+
+      <meta
+        content="{{ $img.Permalink }}"
+        property="og:image"
+      />
+
+      <meta
+        content="{{ $resource.Params.alt }}"
+        property="og:image:alt"
+      />
+
+      <meta
+        content="{{ $ogImageWidth }}"
+        property="og:image:width"
+      />
+
+      <meta
+        content="{{ $ogImageHeight }}"
+        property="og:image:height"
+      />
+
+    {{ end }}
+
+    <meta content="{{- partial "page-title.html" . -}}"
+          property="og:title" />
+
+    <meta content="{{ .Permalink }}"
+          property="og:url" />
+
+    {{ if .IsPage }}
+      <meta content="{{ .Site.Params.author.name }}" name="author" />
+      <meta content="{{ .Site.Params.author.name }}" property="article:author" />
+
+      <meta {{ printf `content="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}
+            property="article:published_time" />
+    {{ end }}
+
+    <title>{{- partial "page-title.html" . -}}</title>
+
+    {{ partial "css.html" }}
+    {{ hugo.Generator }}
+
+  </head>
 
   <body>
     <header id="header">
@@ -14,12 +96,28 @@
     {{- block "main" . }}{{- end }}
 
     <footer id="page-footer">
+
       <ul class="tags">
         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
           {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
             <li>#<a href="{{ .RelPermalink }}">{{ .Name }}</a></li>
           {{ end }}
         {{ end }}
+
+        <li>
+          <a
+            href="/index.xml"
+            title="RSS feed"
+          >
+            <img
+              alt="RSS feed"
+              height="28"
+              src="/images/feed-icon-28x28.png"
+              width="28"
+            />
+          </a>
+        </li>
+
       </ul>
 
       {{ with .Site.Params }}

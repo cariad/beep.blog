@@ -1,16 +1,32 @@
 {{ define "main" }}
 
   <ul class="tags">
+
     {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
       {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
         <li>#<a href="{{ .RelPermalink }}">{{ .Name }}</a></li>
       {{ end }}
     {{ end }}
+
+    <li>
+      <a
+        href="/index.xml"
+        title="RSS feed"
+      >
+        <img
+          alt="RSS feed"
+          height="28"
+          src="/images/feed-icon-28x28.png"
+          width="28"
+        />
+      </a>
+    </li>
+
   </ul>
 
   {{ partial "article-list.html" (dict
       "pages" .Paginator.Pages
-      "thumbnailHeight" 500
+      "thumbnailHeight" 200
   ) }}
 
   <footer class="pagination">
