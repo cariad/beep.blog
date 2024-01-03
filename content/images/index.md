@@ -48,6 +48,26 @@ resources:
       webp_preset: photo
     src: john-lewis-exeter.jpg
 
+  - name: lucid-delete
+    params:
+      alt: The Lucid account deletion page.
+      webp_preset: picture
+    src: lucid-delete.png
+
+  - name: lucid-logout
+    params:
+      alt: The Lucid login page with broken localisation.
+      caption: A beautiful Lucid login page.
+      webp_preset: picture
+    src: lucid-logout.png
+
+  - name: lucid-mangled
+    params:
+      alt: A Lucid Chart diagram with mangled text
+      caption: Thanks, Lucid.
+      webp_preset: picture
+    src: lucid-mangled.png
+
   - name: rhodia-purple
     params:
       alt: Soft cover notebook / 7.5 x 9.8 inches / 80 lined sheets / ribbon bookmark / expandable inner pocket / 90 gsm ivory brushed vellum paper / made in Étival-Clairefontaine, France

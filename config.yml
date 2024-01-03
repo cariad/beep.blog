@@ -15,7 +15,7 @@ params:
       label: "@cariad@mastodon.art"
   copyright:
     from: 2014
-    to: 2023
+    to: 2024
   description: A blog by Cariad Eccleston
 permalinks:
   /: /:filename
