@@ -2,7 +2,7 @@
 {{ $ogImageHeight := 630 }}
 
 {{ $images := .Site.GetPage "/images" }}
-{{ $imageId := default .Params.advertising.image .Params.image }}
+{{ $imageId := default .Params.image .Params.advertising.image }}
 
 <!DOCTYPE html>
 <html lang="en">
