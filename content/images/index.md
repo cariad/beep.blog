@@ -25,6 +25,49 @@ resources:
       webp_preset: photo
     src: exeter-cathedral-from-princesshay.jpg
 
+  - name: gdscript-semi-typed
+    params:
+      alt: |-
+        Three lines of GDScript reading:
+        var a: int = 1
+        var b: int = 2
+        var c = a + b
+      webp_preset: picture
+    src: gdscript-semi-typed.png
+
+  - name: gdscript-typed
+    params:
+      alt: |-
+        Three lines of GDScript reading:
+        var a: int = 1
+        var b: int = 2
+        var c: int = a + b
+      webp_preset: picture
+    src: gdscript-typed.png
+
+  - name: gdscript-typed-performance
+    params:
+      alt: Screenshot of the Godot editor and a GDScript performance test report
+      webp_preset: picture
+    src: gdscript-typed-performance.png
+
+  - name: gdscript-typed-performance-report
+    params:
+      alt: Screenshot of a GDScript performance test report
+      webp_preset: picture
+    src: gdscript-typed-performance-report.png
+
+  - name: gdscript-untyped
+    params:
+      alt: |-
+        Three lines of GDScript reading:
+        var a = 1
+        var b = 2
+        var c = a + b
+        The final line has a dimmed line number.
+      webp_preset: picture
+    src: gdscript-untyped.png
+
   - name: iphone-2021-11-02
     params:
       alt: iPhone home screen with Twitter app

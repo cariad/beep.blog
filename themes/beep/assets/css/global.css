@@ -36,26 +36,44 @@ body {
 }
 
 figure {
+  display: block;
   margin: 0;
+  text-align: center;
 }
 
 figcaption {
   font-size: var(--small-text);
   margin-top: 10px;
-  margin-bottom: 80px;
-  text-align: center;
 }
 
 img {
   height: auto;
+  max-width: fit-content;
   width: 100%;
 }
 
 h1,
 h2,
-p {
+p,
+table {
   margin-inline: auto;
   max-width: 760px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding-bottom: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+td {
+  border-top: 1px solid var(--light-grey);
+  padding-top: 4px;
 }
 
 h2 {
@@ -63,9 +81,11 @@ h2 {
   line-height: 1.2;
 }
 
+figure,
 h2,
 ol,
 p,
+table,
 ul,
 .highlight {
   margin-bottom: var(--paragraph-spacing);

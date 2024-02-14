@@ -1,3 +1,5 @@
 *.lock
+.DS_Store
+hugo
 public
 resources
