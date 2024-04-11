@@ -47,8 +47,15 @@
         />
 
         <figcaption>
-          {{ $resource.Params.caption | safeHTML }}<br />
-          {{ $resource.Params.attribution | safeHTML }}
+          {{- $resource.Params.caption | markdownify -}}
+          {{
+            if and
+              (isset $resource.Params "attribution")
+              (isset $resource.Params "caption")
+          }}
+            <br />
+          {{ end }}
+          {{- $resource.Params.attribution | safeHTML -}}
         </figcaption>
 
       </figure>

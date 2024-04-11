@@ -91,6 +91,30 @@ resources:
       webp_preset: photo
     src: john-lewis-exeter.jpg
 
+  - name: lambdaq-direct-event
+    params:
+      alt:
+        Screenshot of the AWS Lambda console showing a a test payload to
+        request the sum of the integers 1 and 2.
+      webp_preset: picture
+    src: lambdaq-direct-event.png
+
+  - name: lambdaq-direct-response
+    params:
+      alt:
+        Screenshot of the AWS Lambda console showing a function's result is the
+        integer value 3.
+      webp_preset: picture
+    src: lambdaq-direct-response.png
+
+  - name: lambdaq-state-machine-sqs
+    params:
+      alt:
+        A screenshot of the AWS Step Functions console showing the numbers 100
+        and 15 being summed.
+      webp_preset: picture
+    src: lambdaq-state-machine-sqs.png
+
   - name: lucid-delete
     params:
       alt: The Lucid account deletion page.

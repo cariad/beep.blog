@@ -24,7 +24,7 @@
       $resource.Params.caption
   }}
     <figcaption>
-      {{- $resource.Params.caption | safeHTML -}}
+      {{- $resource.Params.caption | markdownify -}}
       {{
         if and
           (isset $resource.Params "attribution")
