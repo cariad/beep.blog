@@ -1,11 +1,14 @@
 ---
 advertising:
   image: rolumns-1-3-code
+aliases:
+  - 2023-07-23-rolums-1-3-recompose-1  # cspell: disable-line
 date: 2023-07-23
 image: rolumns-1-3-code-transparent
 summary: I built them, and now you're going to hear about it.
 tags:
   - python
+  - recompose
 title: Rolumns v1.3 & Recompose v1.0
 ---
 

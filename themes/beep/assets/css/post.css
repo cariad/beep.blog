@@ -3,9 +3,14 @@ code {
   font-size: 0.9rem;
 }
 
+li code,
 p code {
-  color: rgb(7, 75, 16);
+  color: rgb(94, 94, 94);
+  font-size: 0.95rem;
   font-weight: 500;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  vertical-align: middle;
 }
 
 .highlight .chroma {

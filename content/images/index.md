@@ -135,6 +135,18 @@ resources:
       webp_preset: picture
     src: lucid-mangled.png
 
+  - name: recompose-1-0-schema
+    params:
+      alt: Recompose v1.0 schema example
+      webp_preset: text
+    src: recompose-1-0-schema.png
+
+  - name: recompose-1-0-schema-transparent
+    params:
+      alt: Recompose v1.0 schema example
+      webp_preset: text
+    src: recompose-1-0-schema-transparent.png
+
   - name: rhodia-purple
     params:
       alt: Soft cover notebook / 7.5 x 9.8 inches / 80 lined sheets / ribbon bookmark / expandable inner pocket / 90 gsm ivory brushed vellum paper / made in Étival-Clairefontaine, France
