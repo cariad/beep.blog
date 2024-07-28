@@ -41,7 +41,8 @@
 
       {{ $resource := $images.Resources.GetMatch $imageId }}
       {{ $anchor := default "Smart" $resource.Params.anchor }}
-      {{ $params := print $ogImageWidth "x" $ogImageHeight " " $anchor " Lanczos webp " $resource.Params.webp_preset }}
+      {{ $resample_format := default "Lanczos webp" $resource.Params.resample_format }}
+      {{ $params := print $ogImageWidth "x" $ogImageHeight " " $anchor " " $resample_format }}
       {{ $img := $resource.Fill $params }}
 
       <meta

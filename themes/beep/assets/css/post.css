@@ -3,6 +3,12 @@ code {
   font-size: 0.9rem;
 }
 
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 li code,
 p code {
   color: rgb(94, 94, 94);

@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ $imageWidth := 900 }}
+{{ $imageWidth := 550 }}
 
 <article id="single">
   <header>
@@ -34,7 +34,8 @@
       {{ $images := $.Site.GetPage "/images" }}
       {{ $resource := $images.Resources.GetMatch . }}
       {{ $anchor := default "Smart" $resource.Params.anchor }}
-      {{ $params := print $imageWidth "x " $anchor " Lanczos webp " $resource.Params.webp_preset }}
+      {{ $resample_format := default "Lanczos webp" $resource.Params.resample_format }}
+      {{ $params := print $imageWidth "x " $anchor " " $resample_format }}
       {{ $img := $resource.Resize $params }}
 
       <figure>
@@ -46,17 +47,23 @@
           width="{{ $imageWidth }}"
         />
 
-        <figcaption>
-          {{- $resource.Params.caption | markdownify -}}
-          {{
-            if and
-              (isset $resource.Params "attribution")
-              (isset $resource.Params "caption")
-          }}
-            <br />
-          {{ end }}
-          {{- $resource.Params.attribution | safeHTML -}}
-        </figcaption>
+        {{
+          if or
+            $resource.Params.attribution
+            $resource.Params.caption
+        }}
+          <figcaption>
+            {{- $resource.Params.caption | markdownify -}}
+            {{
+              if and
+                (isset $resource.Params "attribution")
+                (isset $resource.Params "caption")
+            }}
+              <br />
+            {{ end }}
+            {{- $resource.Params.attribution | safeHTML -}}
+          </figcaption>
+        {{ end }}
 
       </figure>
 

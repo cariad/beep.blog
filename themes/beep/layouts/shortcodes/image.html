@@ -2,10 +2,11 @@
 {{ $images := .Site.GetPage "/images" }}
 {{ $resource := $images.Resources.GetMatch $name }}
 
-{{ $imageWidth := math.Min $resource.Width 900 }}
+{{ $imageWidth := math.Min $resource.Width 550 }}
 
 {{ $anchor := default "Smart" $resource.Params.anchor }}
-{{ $params := print $imageWidth "x " $anchor " Lanczos webp " $resource.Params.webp_preset }}
+{{ $resample_format := default "Lanczos webp" $resource.Params.resample_format }}
+{{ $params := print $imageWidth "x " $anchor " " $resample_format }}
 {{ $img := $resource.Resize $params }}
 
 <figure>

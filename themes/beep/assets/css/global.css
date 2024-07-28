@@ -10,7 +10,7 @@
 
   --readable-inset-width: 32rem;
 
-  --small-text: 1rem;
+  --small-text: 0.8rem;
 }
 
 a {
@@ -19,7 +19,7 @@ a {
 
 body {
   background-color: #f9f9f9;
-  max-width: 900px;
+  max-width: 550px;
 
   margin-top: var(--tall-spacing);
   margin-bottom: 0;
@@ -30,8 +30,7 @@ body {
   padding-right: 10px;
 
   font-family: "Merriweather Sans", sans-serif;
-  font-size: 1.1em;
-  line-height: 1.8;
+  line-height: 1.7;
   color: rgb(31, 31, 31);
 }
 
@@ -83,6 +82,7 @@ h2 {
 
 figure,
 h2,
+iframe,
 ol,
 p,
 table,
@@ -209,7 +209,7 @@ article p {
 /* ARTICLE FOOTER */
 
 .footnotes ol {
-  max-width: 900px;
+  max-width: 550px;
 }
 
 .footnotes {
@@ -283,7 +283,7 @@ article p {
 @media (min-width: 700px) {
   :root {
     --tall-spacing: 100px;
-    --medium-spacing: 60px;
+    --medium-spacing: 40px;
   }
 
   #site-title {
@@ -291,7 +291,7 @@ article p {
   }
 
   #single h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: left;
   }
 

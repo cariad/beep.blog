@@ -15,7 +15,8 @@
 
           {{ $resource := $images.Resources.GetMatch $imageId }}
           {{ $anchor := default "Smart" $resource.Params.anchor }}
-          {{ $params := print $thumbnailWidth "x" $thumbnailHeight " " $anchor " Lanczos webp " $resource.Params.webp_preset }}
+          {{ $resample_format := default "Lanczos webp" $resource.Params.resample_format }}
+          {{ $params := print $thumbnailWidth "x" $thumbnailHeight " " $anchor " " $resample_format }}
           {{ $img := $resource.Fill $params }}
 
           <a
