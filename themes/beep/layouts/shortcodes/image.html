@@ -2,7 +2,7 @@
 {{ $images := .Site.GetPage "/images" }}
 {{ $resource := $images.Resources.GetMatch $name }}
 
-{{ $imageWidth := math.Min $resource.Width 550 }}
+{{ $imageWidth := math.Min $resource.Width (mul 550 2) }}
 
 {{ $anchor := default "Smart" $resource.Params.anchor }}
 {{ $resample_format := default "Lanczos webp" $resource.Params.resample_format }}

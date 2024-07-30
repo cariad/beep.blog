@@ -29,9 +29,9 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 
+  color: rgb(40, 40, 40);
   font-family: "Merriweather Sans", sans-serif;
-  line-height: 1.7;
-  color: rgb(31, 31, 31);
+  line-height: 2;
 }
 
 figure {
@@ -131,6 +131,13 @@ h1 {
   font-weight: 800;
   line-height: 1.2;
   margin-top: 0;
+}
+
+ul.pagination {
+  column-gap: 15px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
 }
 
 /* PAGE */

@@ -3,7 +3,7 @@ date: 2024-07-20
 image: oh-no-the-space-ship-is-exploding
 summary: I wrote the theme tune, sang the theme tune…
 tags:
-  - game-development
+  - game development
 title: "I ranked 5th in the Indie Dev Game Jam #4!"
 ---
 

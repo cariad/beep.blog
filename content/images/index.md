@@ -9,6 +9,12 @@ resources:
       resample_format: Lanczos webp photo
     src: cleaning-apple-store.jpg
 
+  - name: dunu-tips
+    params:
+      alt: Linsoul DUNU S&S in-ear monitor tips.
+      resample_format: Lanczos webp photo
+    src: dunu-tips.jpeg
+
   - name: exeter-blue-boy
     params:
       alt: Photograph of Exeter's Blue Boy statue
@@ -24,6 +30,12 @@ resources:
       caption: Exeter Cathedral from Princesshay.
       resample_format: Lanczos webp photo
     src: exeter-cathedral-from-princesshay.jpg
+
+  - name: final-e
+    params:
+      alt: Final Audio Type E in-ear monitor tips.
+      resample_format: Lanczos webp photo
+    src: final-e.jpeg
 
   - name: gdscript-semi-typed
     params:
@@ -67,6 +79,12 @@ resources:
         The final line has a dimmed line number.
       resample_format: Lanczos webp picture
     src: gdscript-untyped.png
+
+  - name: iem-tips-2024-07
+    params:
+      alt: A collection of in-ear monitoring ear tips.
+      resample_format: Lanczos webp photo
+    src: iem-tips-2024-07.jpeg
 
   - name: iphone-2021-11-02
     params:
@@ -114,6 +132,12 @@ resources:
         and 15 being summed.
       webp_preset: picture
     src: lambdaq-state-machine-sqs.png
+
+  - name: linsoul-tangzu
+    params:
+      alt: Linsoul TANGZU in-ear monitor tips.
+      resample_format: Lanczos webp photo
+    src: linsoul-tangzu.jpeg
 
   - name: lucid-delete
     params:
@@ -180,6 +204,18 @@ resources:
       caption: A purple soft cover Rhodia notebook, Midori 15 cm aluminium rule, Staedtler Night Blue 2 mm lead holder, 2 mm Staedtler Mars carbon leads and box of Pentel 1 mm EnerGel X pens.
       resample_format: Lanczos webp photo
     src: season-of-mindfulness-2021.jpg
+
+  - name: spinfit-w1-l
+    params:
+      alt: Large-size SpinFit W1 in-ear monitor tips.
+      resample_format: Lanczos webp photo
+    src: spinfit-w1-l.jpeg
+
+  - name: spinfit-w1-m
+    params:
+      alt: Medium-size SpinFit W1 in-ear monitor tips.
+      resample_format: Lanczos webp photo
+    src: spinfit-w1-m.jpeg
 
   - name: staedtler-lead-holder
     params:

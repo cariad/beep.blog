@@ -1,13 +1,17 @@
 ul.tags {
-  column-gap: 1.2rem;
+  column-gap: 0.8rem;
   display: flex;
   flex-flow: row wrap;
   font-size: var(--small-text);
   list-style: none;
   padding: 0;
-  row-gap: 0.3rem;
   width: 100%;
   justify-content: center;
+  line-height: 1;
+}
+
+ul.tags img {
+  width: 50%;
 }
 
 ul.tags li {

@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ $imageWidth := 550 }}
+{{ $imageWidth := mul 550 2 }}
 
 <article id="single">
   <header>
@@ -11,14 +11,20 @@
          title="Permalink to &quot;{{ .Title }}&quot;">
         {{ .Date.Format "Monday, 2 January 2006" -}}
       </a>
+    </p>
+
+    <p class="preamble">
+      By {{ .Site.Params.author.name }}
       &bullet;
-      {{ .Site.Params.author.name }}
-      &bullet;
+      👋
       <a
         href="{{ .Site.Params.author.social.url }}"
         rel="me">
         {{- .Site.Params.author.social.label -}}
       </a>
+      &bullet;
+      ✉️
+      <a href="mailto:cariad@cariad.earth">cariad@cariad.earth</a>
     </p>
 
     {{ with .Params.content_warnings }}

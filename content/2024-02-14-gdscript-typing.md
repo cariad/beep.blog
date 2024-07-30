@@ -5,7 +5,7 @@ date: 2024-02-14
 image: gdscript-typed-performance-report
 summary: Static typing is one of the easiest and most rewarding disciplines you can add to your game development.
 tags:
-  - game-development
+  - game development
   - godot
   - gdscript
 title: Yes, your Godot game runs faster with static types
