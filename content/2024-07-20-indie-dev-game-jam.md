@@ -4,14 +4,15 @@ image: oh-no-the-space-ship-is-exploding
 summary: I wrote the theme tune, sang the theme tune…
 tags:
   - game development
+  - jam
 title: "I ranked 5th in the Indie Dev Game Jam #4!"
 ---
 
-I participated in the Indie Dev Game Jam #4[^home] last week, and my game was ranked 5th of 71 by a jury of my peers! I'm chuffed enough with that!
+I participated in the Indie Dev Game Jam #4[^home] last week, and my game was ranked 5th[^fifth] of 71 by a jury of my peers! I'm chuffed enough with that!
 
 [^home]: [Indie Dev Game Jam #4](https://itch.io/jam/indie-dev-game-jam-4)
 
-<iframe frameborder="0" src="https://itch.io/embed/2832205" width="552" height="167"><a href="https://pixelsallthewaydown.itch.io/oh-no-the-space-ship-is-exploding">Oh No, the Space Ship is Exploding by Cariad @ Pixels All The Way Down</a></iframe>
+[^fifth]: Oh No, the Space Ship is Exploding: https://pixelsallthewaydown.itch.io/oh-no-the-space-ship-is-exploding
 
 | Criteria                  | Rank | Score     |
 | -                         | -    | -         |

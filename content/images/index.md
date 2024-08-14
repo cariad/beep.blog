@@ -231,6 +231,16 @@ resources:
       resample_format: Lanczos webp photo
     src: staedtler-lead-holder-dirty.jpg
 
+  - name: the-portal-opens-characters
+    params:
+      alt:
+        A pixel-art image of two humanoid robots. One appears to be an adult
+        wearing ragged clothes, has lost a leg, and is waving at the viewer.
+        The other appears to be a child who is looking away and anxiously
+        holding a plush shark toy.
+      resample_format: NearestNeighbor png
+    src: the-portal-opens-characters.png
+
   - name: twitter-information-request
     params:
       alt: Our records indicate that you've made 8,827 abuse reports in the past 24 months. Of those, 242 reports have been processed.
